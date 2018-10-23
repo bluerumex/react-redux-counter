@@ -3,7 +3,7 @@ import Counter from './Counter';
 import PropTypes from 'prop-types';
 import './CounterList.css';
 
-const CounterList = ({counters, onIncrement, onDecremnt, onSetColor}) => {
+const CounterList = ({counters, onIncrement, onDecrement, onSetColor}) => {
     const counterList = counters.map(
         (counter, i) => (
             <Counter
@@ -11,7 +11,7 @@ const CounterList = ({counters, onIncrement, onDecremnt, onSetColor}) => {
                 index={i}
                 {...counter}
                 onIncrement={onIncrement}
-                onDecremnt={onDecremnt}
+                onDecrement={onDecrement}
                 onSetColor={onSetColor}
             />
         )
@@ -29,7 +29,7 @@ CounterList.prototype = {
         PropTypes.shape({color: PropTypes.string, number: PropTypes.number})
     ),
     onIncrement: PropTypes.func,
-    onDecremnt: PropTypes.func,
+    onDecrement: PropTypes.func,
     onSetColor: PropTypes.func
 }
 

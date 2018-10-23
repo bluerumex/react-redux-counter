@@ -10,7 +10,7 @@ const Counter = ({number, color, index, onIncrement, onDecrement, onSetColor}) =
                 e.preventDefault();
                 onDecrement(index);
             }}
-            onDoubleClick={onSetColor(index)}
+            onDoubleClick={() => onSetColor(index)}
             style={{
                 backgroundColor: color
             }}
